@@ -132,7 +132,3 @@ Other limitations:
 ## Privacy
 
 StreamFlow does not send any data anywhere. Your settings and saved speeds are stored by your userscript manager, or in the site's `localStorage` if the manager doesn't provide storage.
-
-## License
-
-<!-- Choose a license (for example MIT) and add a LICENSE file to the repository. -->
