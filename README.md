@@ -116,18 +116,10 @@ Frame step pauses the video and moves one frame at the frame rate set in setting
 
 ## Known limitations
 
-These parts of StreamFlow run on **every page**, and turning StreamFlow off for a site does not stop them:
-
-- **Background keep-alive.** The page is always told it is visible and focused, and sites can't listen for `blur`, `focusout`, `visibilitychange` or `pagehide` events. This applies to every element on the page, not only the window. As a result, sites that check form fields when you leave them, or close menus when they lose focus, may not work correctly.
-- **Copy and right-click unlock.** The site's own copy, cut, right-click and text-selection handlers are blocked. Web apps with their own copy/paste or right-click menus (such as online document editors) may not work as expected.
-- **Telemetry blocker.** `fetch()` requests to URLs containing `/telemetry`, `/analytics`, `/signals`, `/beacon` or `/collect` get a fake success response instead of being sent. A site feature whose URL happens to include one of these paths will stop working.
-
+These parts of StreamFlow run on **every page**, and turning StreamFlow off for a site does not stop them.
 If a site breaks, exclude it from StreamFlow in your userscript manager's settings for the script (in Tampermonkey: the script's **Settings** tab, **User excludes**).
-
-Other limitations:
-
-- The HUD can't appear when the `<video>` element itself is fullscreen. Most sites make their whole player fullscreen, and the HUD works there.
-- Picture-in-Picture doesn't work on sites that turn it off, or in browsers that don't let scripts start it. The HUD tells you when this happens.
+The HUD can't appear when the `<video>` element itself is fullscreen. Most sites make their whole player fullscreen, and the HUD works there.
+Picture-in-Picture doesn't work on sites that turn it off, or in browsers that don't let scripts start it. The HUD tells you when this happens.
 
 ## Privacy
 
